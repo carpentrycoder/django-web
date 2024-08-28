@@ -2,10 +2,125 @@
 <html>
 <head>
     <title>Healthcare App</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, h3, p, ul, ol, li, header, main, footer {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9; /* Light grey background */
+            color: #333; /* Darker text color for better readability */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007bff; /* Blue background for header */
+            color: #fff; /* White text color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto; /* Center align main content */
+            background-color: #fff; /* White background for main content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #e9ecef; /* Light grey background for footer */
+            color: #333; /* Darker text color */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+         /* Style the form elements */
+         form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff; /* Blue color for headers */
+        }
+
+        form input, form button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px; /* Rounded corners for input fields */
+            border: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        form button {
+            background-color: #007bff; /* Blue background for buttons */
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        a button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            background-color: #6c757d; /* Grey background for the login button */
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a button:hover {
+            background-color: #5a6268; /* Darker grey on hover */
+        }
+
+        /* Add spacing between form elements */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <!-- Header content -->
+        <h1>Healthcare App</h1>
     </header>
     <main>
         {% block content %}
@@ -13,7 +128,7 @@
         {% endblock %}
     </main>
     <footer>
-        <!-- Footer content -->
+        <p>&copy; 2024 Healthcare App. All rights reserved.</p>
     </footer>
 </body>
 </html>
