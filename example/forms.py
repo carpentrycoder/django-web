@@ -1,6 +1,6 @@
 from django import forms
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from example.models import User  # Import your custom User model
 
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
@@ -9,7 +9,7 @@ class SignUpForm(UserCreationForm):
     user_type = forms.ChoiceField(choices=[('patient', 'Patient'), ('doctor', 'Doctor')])
 
     class Meta:
-        model = User
+        model = User  # Use your custom User model
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'user_type')
 
 class LoginForm(forms.Form):
