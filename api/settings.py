@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ATG_KA_DATA',
         'USER': 'nikhil',
-        'PASSWORD': '',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
     }
