@@ -2,18 +2,26 @@
   "version": 2,
   "builds": [
     {
-      "src": "example/manage.py",
+      "src": "manage.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb",
-        "includeFiles": ["requirements.txt"]
+        "includeFiles": [
+          "api/**",
+          "example/**",
+          "db.sqlite3",
+          "requirements.txt"
+        ]
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "example/manage.py"
+      "dest": "manage.py"
     }
-  ]
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "api.settings"
+  }
 }
