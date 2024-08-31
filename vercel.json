@@ -2,26 +2,19 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
+      "src": "example/manage.py",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "50mb",
-        "includeFiles": [
-          "api/**",
-          "example/**",
-          "db.sqlite3",
-          "requirements.txt"
-        ]
+        "includeFiles": ["requirements.txt"],
+        "buildCommand": "pip install --no-cache-dir -r requirements.txt"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "example/manage.py"
     }
-  ],
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "api.settings"
-  }
+  ]
 }
