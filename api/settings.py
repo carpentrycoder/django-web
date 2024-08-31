@@ -84,12 +84,14 @@ WSGI_APPLICATION = 'api.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Ensure this path is correct
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ATG_KA_DATA',
+        'USER': 'nikhil',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
-
 
 
 # Password validation

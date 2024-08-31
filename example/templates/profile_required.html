@@ -1,0 +1,16 @@
+<!-- templates/update_profile.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Profile</title>
+</head>
+<body>
+    <h1>Update Profile</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{% url 'doctor_dashboard' %}">Back to Dashboard</a>
+</body>
+</html>

@@ -120,15 +120,25 @@
 </head>
 <body>
     <header>
-        <h1>Healthcare App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </header>
     <main>
         {% block content %}
-        <!-- Page-specific content -->
+        <!-- Page-specific content goes here -->
         {% endblock %}
     </main>
     <footer>
-        <p>&copy; 2024 Healthcare App. All rights reserved.</p>
+        <!-- Footer content -->
     </footer>
 </body>
 </html>

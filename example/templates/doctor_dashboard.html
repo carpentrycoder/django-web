@@ -4,5 +4,12 @@
 {% block content %}
   <h1>Doctor Dashboard</h1>
   <p>Welcome, Dr. {{ user.username }}!</p>
-  <!-- Include specific features for doctors here -->
+  
+  <!-- Include specific features for doctors -->
+  <ul>
+    <li><a href="{% url 'create_blog' %}">Create Blog Post</a></li>
+    <li><a href="{% url 'view_blogs' %}">View Blogs</a></li>
+    <!-- Add more doctor-specific links or features here -->
+  </ul>
+
 {% endblock %}

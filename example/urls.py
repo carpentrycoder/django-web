@@ -1,11 +1,14 @@
 from django.urls import path
-from . import views
+from .views import index, signup, login_view, patient_dashboard, doctor_dashboard, create_blog, view_blogs, update_profile, profile_required
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('signup/', views.signup, name='signup'),
-    path('login/', views.login_view, name='login'),
-    path('logout/', views.logout_view, name='logout'),
-    path('patient_dashboard/', views.patient_dashboard, name='patient_dashboard'),
-    path('doctor_dashboard/', views.doctor_dashboard, name='doctor_dashboard'),
+    path('', index, name='index'),
+    path('signup/', signup, name='signup'),
+    path('login/', login_view, name='login'),
+    path('dashboard/patient/', patient_dashboard, name='patient_dashboard'),
+    path('dashboard/doctor/', doctor_dashboard, name='doctor_dashboard'),
+    path('blog/create/', create_blog, name='create_blog'),
+    path('blogs/', view_blogs, name='view_blogs'),
+    path('profile/update/', update_profile, name='update_profile'),
+    path('profile/required/', profile_required, name='profile_required'),  # Add this line
 ]
